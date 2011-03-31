@@ -1,0 +1,13 @@
+    <div id="wrapper">
+      <div id="header"> <h1><%= image_tag "icons/logo.jpg"%></h1>
+	<div id="nav">
+	  <a href="#"><%= image_tag "icons/m1.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m2.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m3.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m4.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m5.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m6.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m7.jpg" %></a>
+	  <a href="#"><%= image_tag "icons/m8.jpg" %></a>
+	</div>
+      </div>

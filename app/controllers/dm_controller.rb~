@@ -1,0 +1,2 @@
+class DmController < ApplicationController
+end

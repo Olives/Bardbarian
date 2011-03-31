@@ -8,6 +8,7 @@
     <script type="text/javascript">
       $(function(){
         $("li.nav_<%=@active_nav%>").addClass("active");
+        $("li.subnav_<%=@active_subnav%>").addClass("active");
       });
     </script>
   </head>
@@ -15,6 +16,8 @@
     <div class="heading">
       <%= render :partial => "/layouts/primary_nav" %>
     </div>
+    <%= render :partial => "layouts/subnav" if @subnav %>
+
     <div id="content" class="round-all">
       <div>
         <div id="body-left">

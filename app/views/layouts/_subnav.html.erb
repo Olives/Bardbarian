@@ -1,0 +1,7 @@
+<div>
+  <ul id="nav">
+    <% @subnav.each_pair do |name, link| %>
+      <li class="round-top subnav_<%=name.downcase.gsub(' ', '_')%>"><%= link_to name, link %></li>
+    <% end %>
+  </ul>
+</div>

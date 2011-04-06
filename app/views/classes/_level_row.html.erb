@@ -1,0 +1,8 @@
+<tr id="level_<%=level.rank%>">
+  <td> <%= level.rank %> </td>
+  <td> +<%= @klass.level_bab(level.rank) %></td>
+  <td> +<%= @klass.level_fort(level.rank) %></td>
+  <td> +<%= @klass.level_ref(level.rank) %></td>
+  <td> +<%= @klass.level_will(level.rank) %></td>
+  <td> <%= text_field_tag "level[${level.rank}][specials]" %> </td>
+</tr>

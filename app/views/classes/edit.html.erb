@@ -1,0 +1,89 @@
+<div style="margin:auto">
+<h1> Editing <%= @klass.name %></h1>
+
+<% form_for @klass, :url => class_path(@klass) do %>
+
+  <div class="row">
+    <label class="form_label" for="klass_name"> Name: </label>
+    <%= text_field :klass, :name %>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_alignment_restriction"> Alignment Restriction: </label>
+    <%= text_field :klass, :alignment_restriction %>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_base_class"> Class Type: </label>
+      <div class="dropdown">
+        <%= select :klass, :base_class, [["Base Class", 1], ["Prestige Class", 0]],  {}, :class => :selectbox %>
+      </div>
+      <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_hit_dice"> Hit Dice: </label>
+    <div class="dropdown">
+      <%= select :klass, :hit_dice, [4,6,8,10,12].collect{|c| ["D#{c}", c]},  {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_skill_ranks"> Skill Ranks: </label>
+    <div class="dropdown">
+      <%= select :klass, :skill_ranks, [2,4,6,8].collect{|c| ["#{c}+int", c]},  {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_bab"> BAB: </label>
+    <div class="dropdown">
+      <%= select :klass, :bab, [["Good", 2], ["Medium", 1], ["Poor", 0]],  {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_fort"> Fort Save: </label>
+    <div class="dropdown">
+      <%= select :klass, :fort, [["Good", 1], ["Poor", 0]],  {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_ref"> Reflex Save: </label>
+    <div class="dropdown">
+      <%= select :klass, :ref, [["Good", 1], ["Poor", 0]],  {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label" for="klass_will"> Will Save: </label>
+    <div class="dropdown">
+      <%= select :klass, :will, [["Good", 1], ["Poor", 0]], {}, :class => :selectbox %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <label class="form_label">&nbsp;</label>
+    <%= submit_tag "Update" %>
+  </div>
+<% end %>
+
+  <% if @levels.any? %>
+  <table class="class_layout">
+    <tr>
+      <th> Level </th>
+      <th> BAB </th>
+      <th> Fort </th>
+      <th> Ref </th>
+      <th> Will </th>
+      <th> Special </th>
+    </tr>
+    <% @levels.each do |lvl| %>
+      <%= render :partial => "level_row", :locals => {:level => lvl} %>
+    <% end %>
+  </table>
+  <div style="width: 90%; text-align:right">
+    <%= link_to({:action => :add_level, :id => @klass.id}, :remote => true ) do%>
+      <button class="round-all"> Add Level </button>
+    <% end %>
+  </div>
+  <% end %>
+</div>

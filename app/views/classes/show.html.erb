@@ -1,0 +1,17 @@
+<h1> <%= @klass.name $> </h1>
+
+<% form_tag do %>
+
+  <table>
+    <tr>
+      <th> Level </th>
+      <th> Special </th>
+    </tr>
+    <%= @levels.each do |lvl| %>
+    <tr>
+      <td> <%= lvl.rank %> </td>
+      <td> <%= text_field_tag "level[${lvl.rank}][specials]" %> </td>
+    </tr>
+    <% end %>
+
+<% end %>

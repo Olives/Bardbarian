@@ -1,21 +1,38 @@
+html, body { height: 100% }
 html, body, ul, li { margin: 0; padding: 0; list-style: none; }
-body { font: 12px tahoma, arial, sans-serif;	margin: 0; padding: 0; color: #5C5C5C; }
+body { font: 12px tahoma, arial, sans-serif; margin: 0; padding: 0; color: #5C5C5C; }
 img { border: 0; }
 a   { font-weight: bold; text-decoration: none; }
 
 body { background: #a4b372 }
+
+button, input { font-size: 100%; background: #C1CB9F; width: 100px }
+
 
 .heading { background: url(/images/ui/header_bg.jpg) repeat-x; text-align: left; margin: auto;  }
 .nav { text-align: left; background: url(/images/ui/subnav_bg.jpg) repeat-x;}
 .main_logo { padding-left: 10%; padding-right: 10%; padding-top: 1px}
 .more {	text-align: right; }
 .left {	float: left; }
-.clear { clear: both; }
+.left {	float: right; }
+.footer, .clear { clear:both }
+.footer { color: #FFFFFF; background: #42453D url(/images/icons/footer_bg.gif) repeat-x;
+          padding: 6px 0 5px 0; margin-top: 2em; font-weight: bold; }
+.footer p { margin: 0; padding: 0; }
+
+table.class_layout { width: 90%; border-collapse: collapse; }
+table.class_layout tr:first-child { border-top: 1px solid }
+table.class_layout tr { border-bottom: 1px solid }
+table.class_layout tr:nth-child(odd) { background-color: #a4b372; }
+table.class_layout tr:nth-child(even) { background-color: #cfd9ae; }
+table.class_layout td,table.class_layout th { border-right: 1px solid }
+table.class_layout td:first-child,table.class_layout th:first-child { border-left: 1px solid }
+table.class_layout input { background: #FFF; width: 90%}
+
 
 #content { background: #fff url(/images/ui/body_bg.jpg) repeat-x;
-           min-height:900px;
-           text-align: left; margin-left: 125px; margin-right: 125px; }
-
+           min-height:100%;
+           text-align: left; margin-left: 125px; margin-right: 125px; padding-bottom: 8em; margin-bottom: -4em }
 
 ul#nav  { height:27px; text-align: center; font-size: 15px; padding-left:10%;padding-right: 10%; }
 ul#nav li { background: url(/images/ui/nav_button_bg.jpg) repeat-x; border-right : 1px solid #a4b372;
@@ -46,12 +63,12 @@ ul#subnav li.active { background: url(/images/ui/active_nav_bg.jpg) repeat-x; }
 #search-news p { padding-left: 15px; padding-right: 2px; margin: 0.1em 0; }
 a { font-weight: bold; 	color: #5C5C5C; }
 
-#body-left { float: left; width: 408px; }
-#body-right { float: right; width: 330px; }
+.body-left { float: left; width: 670px; }
+.body-right { float: right; width: 330px; }
 
-#body-left ul.plussbullets { margin-top: 45px;
+ul.plussbullets { margin-top: 45px;
 	margin-left: 120px; padding: 0; font-weight: bold; }
-#body-left ul.plussbullets li { background: top left url(/images/icons/bullet_plus.gif) no-repeat;
+ul.plussbullets li { background: top left url(/images/icons/bullet_plus.gif) no-repeat;
                                 margin: 0 0 10px 0; padding: 0 0 0 25px; }
 
 #body h2, #body p { margin: 0.3em 0; }
@@ -62,9 +79,11 @@ a { font-weight: bold; 	color: #5C5C5C; }
 
 #gallery img { float: left; }
 
-#footer { color: #FFFFFF; background: #42453D url(/images/icons/footer_bg.gif) repeat-x;
-          padding: 6px 0 5px 0; margin-top: 2em; font-weight: bold; }
-#footer p { margin: 0; padding: 0; }
+/* form related */
+.form_label { float:left; width: 150px; }
+.dropdown { float:left; }
+.row { margin-top: 5px; margin-bottom: 5px; }
+
 
 .flash-notice                    { background : #e0f0ff url(/images/icons/information.png) no-repeat 10px center;
                                    color : #6f777f; padding : 10px; padding-left : 36px;
@@ -76,7 +95,7 @@ a { font-weight: bold; 	color: #5C5C5C; }
                                    color : #695454; border: 1px solid #ff2e2e; padding : 10px;
                                    padding-left : 36px; margin-bottom : 15px; }
 
-.round-all                       { -moz-border-radius : 5px; -webkit-border-radius : 5px; border-radius : 5px; }
+input, .round-all                       { -moz-border-radius : 10px; -webkit-border-radius : 10px; border-radius : 10px; }
 .round-top                       { -moz-border-radius-topright : 5px; -moz-border-radius-topleft : 5px;
                                    -webkit-border-top-right-radius : 5px;
                                    -webkit-border-top-left-radius : 5px;

@@ -1,0 +1,15 @@
+<h1> Base Classes </h1>
+
+<ul>
+  <% @base_classes.each do |klass| %>
+    <li><%= link_to klass.name, edit_class_path(klass) %> </li>
+  <% end %>
+</ul>
+
+<h1> Prestige Classes </h1>
+
+<ul>
+  <% @prestige_classes.each do |klass| %>
+    <li><%= klass.name %> </li>
+  <% end %>
+</ul>

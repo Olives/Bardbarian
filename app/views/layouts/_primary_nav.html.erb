@@ -3,14 +3,21 @@
 </div>
 <div class="nav">
   <ul id="nav">
-    <li class="round-top nav_dm">
-      <%= link_to "DM", "/dm" %>
-    </li>
     <li class="round-top nav_campaigns">
-      <%= link_to "Campaigns", "/campaigns"%>
+      <%= link_to "Campaigns", campaigns_path%>
     </li>
     <li class="round-top nav_characters">
-      <%= link_to "Characters", "/characters"%>
+      <%= link_to "Characters", characters_path %>
     </li>
+    <li class="round-top nav_classes">
+      <%= link_to "Classes", classes_path %>
+    </li>
+    <li class="round-top nav_skills">
+      <%= link_to "Skills", skills_path%>
+    </li>
+    <li class="round-top nav_feats">
+      <%= link_to "Feats", feats_path%>
+    </li>
+
   </ul>
 </div>

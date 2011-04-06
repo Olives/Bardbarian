@@ -1,0 +1,62 @@
+/* Drop down styles*/
+ div.selectbox-wrapper {
+  position:absolute;
+  width:40px;
+  background:#C1CB9F;
+  border:solid 1px ;
+  margin:0px;
+  margin-top:-19px;
+  padding:0px;
+  padding-left: 4px;
+  text-align:left;
+  max-height:200px;
+  overflow:auto;
+  -moz-border-radius : 10px;
+  -webkit-border-radius : 10px;
+  border-radius : 10px;
+}
+
+/*Drop down list styles*/
+div.selectbox-wrapper ul {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+/*Drop down list styles*/
+/* Selected item in dropdown list*/
+div.selectbox-wrapper ul li.selected {
+  background-color: #C1CB9F;
+}
+
+/* Hover state for dropdown list */
+div.selectbox-wrapper ul li.current {
+  background-color: #C1CB9F;
+}
+
+/* Drop down list items style*/
+div.selectbox-wrapper ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  padding-left:5px;
+  cursor:pointer;
+  text-align:left;
+  font-size: 102%;
+}
+div.selectbox-wrapper li {
+  -moz-border-radius : 10px; -webkit-border-radius : 10px; border-radius : 10px;
+}
+
+
+/* Look and feel of select box */
+.selectbox
+{
+  padding-left:2px;
+  width : 100px; /* Resize Width */
+  display : block;
+  text-align:left;
+  cursor: pointer;
+}
+
+div.selectbox-wrapper li:first-child, input.selectbox { background: #C1CB9F url(/images/icons/down_arrow.png) no-repeat scroll right; }

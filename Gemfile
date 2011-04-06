@@ -3,6 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '~>3.0'
 gem 'jquery-rails', '>= 0.2.6'
 
+gem 'ruby-debug19', :require => 'ruby-debug'
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
